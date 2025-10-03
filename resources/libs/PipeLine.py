@@ -63,6 +63,7 @@ class PipeLine:
 
 
             DISPLAY_MAP = {
+                "virt":  Display.VIRT,
                 "hdmi":     Display.LT9611,
                 "lt9611":   Display.LT9611,
                 "lcd":      Display.ST7701,
@@ -71,6 +72,7 @@ class PipeLine:
                 "nt35516":  Display.NT35516,
                 "nt35532":  Display.NT35532,
                 "gc9503":   Display.GC9503,
+    
             }
 
             # Look up type, fallback to ST7701 if not found
@@ -86,11 +88,20 @@ class PipeLine:
                     to_ide=to_ide
                 )
             else:
-                Display.init(
-                    display_type,
-                    osd_num=self.osd_layer_num,
-                    to_ide=to_ide
-                )
+                if display_type is Display.VIRT:
+                    Display.init(
+                        display_type,
+                        width=sensor.width(),
+                        height=sensor.height(),
+                        osd_num=self.osd_layer_num,
+                        to_ide=to_ide
+                    )
+                else:
+                    Display.init(
+                        display_type,
+                        osd_num=self.osd_layer_num,
+                        to_ide=to_ide
+                    )
                 # Update actual size after init
                 self.display_size = [Display.width(), Display.height()]
 
