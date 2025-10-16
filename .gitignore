@@ -1,5 +1,8 @@
 generated
 
+# repo 
+.repo/
+
 # subproject
 micropython/
 port/3rd-party/lv_bindings/lvgl/
