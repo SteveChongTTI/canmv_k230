@@ -31,7 +31,7 @@ docker run --rm -it -v $(pwd):/workspace canmv_k230_build
 A `docker-compose.yml` is provided for convenience. From the directory containing the compose file, run:
 
 ```sh
-docker-compose up --build
+docker compose up --build
 ```
 
 - This builds the image (if needed) and starts a container with your project mounted.
