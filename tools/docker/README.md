@@ -44,8 +44,15 @@ Once inside the container shell, you can use the standard build commands, for ex
 
 ```sh
 # Initialize and sync repo (if needed)
-repo init -u . -m canmv_k230_repo/tools/repo/default.xml --repo-url=https://github.com/canmv-k230/git-repo.git
-repo sync
+mkdir build_k230_image
+cd build_k230_image
+repo init -u https://github.com/canmv-k230/manifest -b master --repo-url=https://github.com/canmv-k230/git-repo.git
+# cp ../canmv_k230_repo/tools/repo/default_local_docker.xml .repo/manifests/
+cp ../canmv_k230_repo/tools/repo/default_local_docker.xml .repo/manifests/
+repo sync -m default_local_docker.xml
+
+# Troubleshooting:
+# If you see errors about 'HEAD' or missing branches, ensure you have run 'git init' and created a branch (e.g., master or main) in this directory before running 'repo init'.
 
 # Download toolchain (if needed)
 make dl_toolchain
