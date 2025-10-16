@@ -1,6 +1,7 @@
 
+name: canmv_k230_micropython
 services:
-  canmv_k230_build:
+  canmv_k230_micropython:
     build:
       context: ../..
       dockerfile: tools/docker/Dockerfile.txt
