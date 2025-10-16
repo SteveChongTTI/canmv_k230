@@ -5,10 +5,12 @@ services:
     build:
       context: ../..
       dockerfile: tools/docker/Dockerfile.txt
+      args:
+        TARGETPLATFORM: linux/amd64
     image: canmv_k230_build:latest
     container_name: canmv_k230_build
     volumes:
-      - ../..:/workspace
+      - ../..:/workspace/canmv_k230_repo
     working_dir: /workspace
     tty: true
     stdin_open: true

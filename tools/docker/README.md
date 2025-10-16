@@ -1,4 +1,4 @@
-# Docker & Docker Compose Usage Guide
+# Docker & Docker Compose Usage Guide(Build)
 
 This guide explains how to build and use the Docker image and Docker Compose setup for the canmv_k230 project.
 
@@ -42,7 +42,7 @@ Once inside the container shell, you can use the standard build commands, for ex
 
 ```sh
 # Initialize and sync repo (if needed)
-repo init -u https://github.com/canmv-k230/manifest -b master --repo-url=https://github.com/canmv-k230/git-repo.git
+repo init -u . -m tools/repo/default.xml --repo-url=https://github.com/canmv-k230/git-repo.git
 repo sync
 
 # Download toolchain (if needed)
