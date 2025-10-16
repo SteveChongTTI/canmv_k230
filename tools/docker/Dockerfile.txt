@@ -59,6 +59,10 @@ RUN curl -L https://kendryte-download.canaan-creative.com/k230/toolchain/Xuantie
     tar xf /root/.kendryte/k230_toolchains/Xuantie-900-gcc-linux-5.10.4-glibc-x86_64-V2.6.0.tar.bz2 -C /root/.kendryte/k230_toolchains/ && \
     rm -rf /root/.kendryte/k230_toolchains/Xuantie-900-gcc-linux-5.10.4-glibc-x86_64-V2.6.0.tar.bz2
 
+# install repo tool
+RUN curl https://storage.googleapis.com/git-repo-downloads/repo > /usr/local/bin/repo && \
+    chmod a+rx /usr/local/bin/repo
+
 # Set the working directory for the project
 WORKDIR /workspace
 
