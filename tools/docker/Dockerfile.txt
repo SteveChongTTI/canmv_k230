@@ -30,10 +30,12 @@ RUN apt-get update && \
     bzip2 \
     curl \
     git \
+    repo \
     openssh-client \
     rsync \
     dosfstools \
     ca-certificates \
+    vim \
     && apt-get clean && \
     update-ca-certificates && \
     rm -rf /var/lib/apt/lists/*
