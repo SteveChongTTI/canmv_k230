@@ -3,12 +3,12 @@ version: '3.8'
 services:
   canmv_k230_build:
     build:
-      context: .
+      context: ../..
       dockerfile: tools/docker/Dockerfile.txt
     image: canmv_k230_build:latest
     container_name: canmv_k230_build
     volumes:
-      - .:/workspace
+      - ../..:/workspace
     working_dir: /workspace
     tty: true
     stdin_open: true
