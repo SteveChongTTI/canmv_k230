@@ -92,6 +92,8 @@ make dl_toolchain
 make list_def
 
 # Select a configuration (replace with your board's defconfig)
+# see build_k230_image/configs for available defconfig files or add your own
+# e.g. k230_canmv_01studio_defconfig
 make k230_canmv_defconfig
 
 # Build the project
