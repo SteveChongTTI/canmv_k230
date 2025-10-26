@@ -11,7 +11,7 @@ This guide explains how to build and use the Docker image and Docker Compose set
 From the project root directory, run:
 
 ```sh
-docker build -f tools/docker/Dockerfile.txt -t canmv_k230_build .
+docker build --build-arg TARGETPLATFORM=linux/amd64 -f tools/docker/Dockerfile.txt -t canmv_k230_build .
 ```
 
 - This builds the image using the provided Dockerfile.

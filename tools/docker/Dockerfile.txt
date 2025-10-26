@@ -36,6 +36,7 @@ RUN apt-get update && \
     dosfstools \
     ca-certificates \
     vim \
+    locales \
     && apt-get clean && \
     update-ca-certificates && \
     rm -rf /var/lib/apt/lists/*
