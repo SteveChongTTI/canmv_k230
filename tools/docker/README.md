@@ -54,12 +54,12 @@ repo init -u https://github.com/canmv-k230/manifest -b master --repo-url=https:/
 
 ### 3.1a Customizing the Manifest File
 
-Base on what you need to build, the default manifest file may not be suitable. You can copy a custom manifest file from the host to the container and use it during repo sync:(here we use `default_local_docker.xml` it will use the this repo `dev` branch to sync code)
+Base on what you need to build, the default manifest file may not be suitable. You can copy a custom manifest file from the host to the container and use it during repo sync:(here we use `default_local_dev_repo.xml` it will use the this repo `dev` branch to sync code)
 
 ```sh
 # cp ../canmv_k230_repo/tools/repo/default_local_docker.xml .repo/manifests/
-cp ../canmv_k230_repo/tools/repo/default_local_docker.xml .repo/manifests/
-repo sync -m default_local_docker.xml
+cp ../canmv_k230_repo/tools/repo/default_local_dev_repo.xml .repo/manifests/
+repo sync -m default_local_dev_repo.xml
 
 # Troubleshooting:
 # If you see errors about 'HEAD' or missing branches, ensure you have run 'git init' and created a branch (e.g., master or main) in this directory before running 'repo init'.
