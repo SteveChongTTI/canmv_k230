@@ -84,6 +84,9 @@ repo sync -m default_local_file.xml
 
 ### 3.2 Build Commands
 
+> Note: you may need to install additional Python dependencies for certain builds. For example, to install requirements for mbedtls, run:(run in venv if you follow on host ubuntu setup, instead of in docker container)
+
+> pip3 install -r /workspace/build_k230_image/src/rtsmart/libs/3rd-party/mbedtls/mbedtls/scripts/driver.requirements.txt
 ```sh
 # Download toolchain (if needed)
 make dl_toolchain
@@ -93,7 +96,7 @@ make list_def
 
 # Select a configuration (replace with your board's defconfig)
 # see build_k230_image/configs for available defconfig files or add your own
-# e.g. k230_canmv_01studio_defconfig
+# e.g. make k230_canmv_01studio_defconfig
 make k230_canmv_defconfig
 
 # Build the project
