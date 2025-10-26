@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <remote name="github" fetch="https://github.com/"/>
-  <remote name="local" fetch="/workspace/canmv_k230_repo"/>
+  <remote name="local" fetch="file://workspace"/>
 
   <!-- sdk start -->
   <project path="." name="kendryte/k230_rtos_sdk" groups="sdk_super" remote="github" revision="main"/>
@@ -18,7 +18,8 @@
   <project path="src/rtsmart/libs/3rd-party/mqttclient/mqttclient" name="jiejieTop/mqttclient" groups="sdk-common" remote="github" clone-depth="100" revision="956e0c8dcac02d4b107ccb49f1990c7718b6b585"/>
 
   <!-- canmv start -->
-  <project path="src/canmv" name="canmv-k230" groups="canmv_super" remote="local" revision="HEAD"/>
+  <!-- <project path="src/canmv" name="canmv_k230_repo" groups="canmv_super" remote="local" revision="HEAD"/> -->
+  <project path="src/canmv" name="canmv_k230_repo" />
 
   <project path="src/canmv/micropython" name="canmv-k230/micropython" groups="canmv-common" remote="github" revision="canmv_k230"/>
   <project path="src/canmv/micropython/lib/micropython-lib" name="micropython/micropython-lib" groups="canmv-common" remote="github" clone-depth="200" revision="e025c843b60e93689f0f991d753010bb5bd6a722"/>
