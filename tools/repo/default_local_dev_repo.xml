@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <remote name="github" fetch="https://github.com/"/>
-  <remote name="local" fetch="file://workspace"/>
+  <remote name="local" fetch="file:///workspace"/>
 
   <!-- sdk start -->
   <project path="." name="kendryte/k230_rtos_sdk" groups="sdk_super" remote="github" revision="main"/>
