@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="github" fetch="https://github.com/"/>
+  <remote name="local" fetch="file://workspace"/>
+
+  <!-- sdk start -->
+  <project path="." name="kendryte/k230_rtos_sdk" groups="sdk_super" remote="github" revision="main"/>
+
+  <project path="src/uboot/uboot" name="canmv-k230/u-boot" groups="sdk" remote="github" revision="canmv_k230"/>
+  <project path="src/opensbi/opensbi" name="canmv-k230/opensbi" groups="sdk-common" remote="github" revision="canmv_k230"/>
+
+  <project path="src/rtsmart/rtsmart" name="canmv-k230/rtsmart" groups="sdk" remote="github" revision="canmv_k230"/>
+  <project path="src/rtsmart/mpp" name="canmv-k230/mpp" groups="sdk" remote="github" revision="canmv_k230"/>
+  <project path="src/rtsmart/libs" name="canmv-k230/k230_rtsmart_lib" groups="sdk" remote="github" revision="refs/heads/v2.9.0"/>
+
+  <project path="src/rtsmart/libs/3rd-party/freetype/freetype" name="freetype/freetype" groups="sdk-common" remote="github" clone-depth="100" revision="1452355de99d22b0cba6ccc17bf5cdf3682ef61e"/>
+  <project path="src/rtsmart/libs/3rd-party/mbedtls/mbedtls" name="canmv-k230/mbedtls" groups="sdk-common" remote="github" clone-depth="10" revision="canmv_k230"/>
+  <project path="src/rtsmart/libs/3rd-party/mqttclient/mqttclient" name="jiejieTop/mqttclient" groups="sdk-common" remote="github" clone-depth="100" revision="956e0c8dcac02d4b107ccb49f1990c7718b6b585"/>
+
+  <!-- canmv start -->
+  <!-- <project path="src/canmv" name="canmv_k230_repo" groups="canmv_super" remote="local" revision="HEAD"/> -->
+  <project path="src/canmv" name="canmv_k230_repo" groups="canmv_super" remote="local" revision="dev"/>
+
+  <project path="src/canmv/micropython" name="canmv-k230/micropython" groups="canmv-common" remote="github" revision="canmv_k230"/>
+  <project path="src/canmv/micropython/lib/micropython-lib" name="micropython/micropython-lib" groups="canmv-common" remote="github" clone-depth="200" revision="e025c843b60e93689f0f991d753010bb5bd6a722"/>
+
+  <project path="src/canmv/port/3rd-party/lv_bindings/lvgl" name="lvgl/lvgl" groups="canmv-common" remote="github" clone-depth="2000" revision="1bfdecf585bb50fbb22ed1c38450b5c9eb600196"/>
+  <project path="src/canmv/port/3rd-party/lv_bindings/pycparser" name="eliben/pycparser" groups="canmv-common" remote="github" clone-depth="1000" revision="3cf6bf5eb16f5eadd4a058e41596145c407a79ad"/>
+
+</manifest>

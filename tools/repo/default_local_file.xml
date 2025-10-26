@@ -19,7 +19,7 @@
 
   <!-- canmv start -->
   <!-- <project path="src/canmv" name="canmv_k230_repo" groups="canmv_super" remote="local" revision="HEAD"/> -->
-  <project path="src/canmv" name="canmv_k230_repo" />
+  <!-- <project path="src/canmv" name="canmv_k230_repo" groups="canmv_super" remote="local" revision="dev"/> -->
 
   <project path="src/canmv/micropython" name="canmv-k230/micropython" groups="canmv-common" remote="github" revision="canmv_k230"/>
   <project path="src/canmv/micropython/lib/micropython-lib" name="micropython/micropython-lib" groups="canmv-common" remote="github" clone-depth="200" revision="e025c843b60e93689f0f991d753010bb5bd6a722"/>
